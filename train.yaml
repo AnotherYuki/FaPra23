@@ -1,0 +1,10 @@
+
+path: C:\Users\chris\Desktop\Dataset\Final #please use absolut path!
+train: images
+val: images
+
+#classes
+names:
+  0: 'person'
+  1: 'eating_animation'
+  2: 'chipsbowl'

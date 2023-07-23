@@ -1,0 +1,28 @@
+Abgabe zum Fapra 2023
+Videoerkennung von Chips-essen im Spiel VR-Chat
+
+##Anleitung
+Python-Version: 3.10
+Externe Bibliotheken:
+    ultralytics (pip install ultralytics)
+    ansonsten werden nur Standardbibliotheken verwendet (os, xml.etree.ElementTree und datetime)
+Das Projekt bitte herunterladen und im gewünschten Ordner entpacken
+Führen Sie die Datei main.py in der Umgebung aus, um das Programm zu starten
+
+Dateibeschreibung:
+    main.py -   Hauptdatei des Projekts, steuert den Ablauf
+    Analyzer.py -   führt die Analyse mit YOLO aus, ruft weiterverarbeitung auf
+    InteractionByCombination.py -   Enthält die Interaktionserkennung anhand der Kombinationsvariante
+    InteractionByDistance.py    -   Enthält die Interaktionserkennung anhand der Distanz
+    Interaction.py  -   Enthält die Klasse Interaction und ihre Definition
+    Videoobjects.py -   Enthält die Klasse Videoobjects und ihre Definition
+    XmlWriter.py    -   Erstellt eine Xml-Datei
+    train.yaml  -   Konfigurationsdatei für das Training
+
+Im Ordner runs -> detect -> train8 befinden sich die Ergebnisse des Trainings
+und damit das zu nutzende YOLO-Modell
+
+"Trainiert wurde das vortrainierte Nano-Modell für 200 Epochen mit dem Coco128 Daten-
+satz, allerdings NUR mit den Bildern die Personen enthalten und die entsprechenden
+Annotationen für Personen, so wie einem zusätzlichen Datensatz von 52 Bildern, welche
+59 Chipsschüsseln, 31 Verschwindeanimationen und 33 Avatare in VR-Chat beinhalteten."
