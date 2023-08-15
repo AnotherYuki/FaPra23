@@ -53,7 +53,7 @@ def detectInteraction(results):
                 objectList.append(video_objekt)
                 typ = typ + 1
             for index in range(len(b)):
-                video_objekt = videoobjectCreator(typ, "eating_animation",
+                video_objekt = videoobjectCreator(typ, "chipsbowl",
                                                   *results[x].boxes.xywh[b[index]].tolist()[0],
                                                   results[x].boxes.conf[b[index]].item())
                 objectList.append(video_objekt)

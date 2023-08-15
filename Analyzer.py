@@ -33,5 +33,5 @@ class Analyzer:
         # load pre-trained model
         model = YOLO("runs/detect/train8/weights/last.pt")
         # predict on an image
-        detection_output = model.predict(source=path, conf=0.5, save=False, verbose=False)
+        detection_output = model.predict(source=path, conf=0.5, save=True, verbose=False)
         return detection_output

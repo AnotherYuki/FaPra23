@@ -10,7 +10,7 @@ def erstelle_xml(interaktionen, video_dateipfad, dateiname):
     Xmlt.SubElement(root, 'date').text = datetime.now().strftime('%d-%m-%Y')
 
     for interaktion in interaktionen:
-        interaktion_elem = Xmlt.SubElement(root, 'interaktion', attrib={'begin': str(interaktion.begin),
+        interaktion_elem = Xmlt.SubElement(root, 'interaction', attrib={'begin': str(interaktion.begin),
                                                                         'end': str(interaktion.end)})
         Xmlt.SubElement(interaktion_elem, 'type').text = interaktion.typ
         Xmlt.SubElement(interaktion_elem, 'descrption').text = interaktion.description
@@ -29,4 +29,4 @@ def erstelle_xml(interaktionen, video_dateipfad, dateiname):
     tree = Xmlt.ElementTree(root)
     with open(dateiname, 'wb') as file:
         tree.write(file)
-        print("Xml gespeichert")
+    print("Xml gespeichert")

@@ -91,7 +91,10 @@ def detectInteraction(results):
                     for y in range(len(a)):
                         if checkDistance(results[x].boxes.xyxy[b[index]], results[x].boxes.xyxy[a[y]]):
                             relevantpersons = relevantpersons + 1
-                x = next(it)
+                if interactingpersons == relevantpersons:
+                    x = next(it)
+                else:
+                    break
             end = x
             if interactiondetected:
                 interaction = interactionCreator("A6", "eating chips", start, end, objectList)

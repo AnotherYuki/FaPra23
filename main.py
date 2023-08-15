@@ -15,8 +15,8 @@ def printlists(interactions):
     else:
         for interaction in interactions:
             print(interaction)
-            for vobject in interaction.objects:
-                print(vobject)
+            # for vobject in interaction.objects:
+            #     print(vobject)
 
 
 """
